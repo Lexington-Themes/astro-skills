@@ -147,6 +147,6 @@ Field conventions:
 
 ---
 
-Maintained by [Michael Andreuzza](https://lexingtonthemes.com), maker of
-Lexington Themes: Astro + Tailwind themes that ship with AGENTS.md, scoped
-rules, and design skills out of the box.
+Maintained by [Michael Andreuzza](https://michaelandreuzza.com) at
+[Lexington Themes](https://lexingtonthemes.com): Astro + Tailwind themes
+that ship with AGENTS.md, scoped rules, and design skills out of the box.

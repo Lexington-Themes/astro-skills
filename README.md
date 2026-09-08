@@ -1,8 +1,9 @@
 # Astro Skills
 
 Free agent skills for the Astro + Tailwind CSS stack, by
-[Michael Andreuzza](https://lexingtonthemes.com), maker of Lexington Themes,
-built on the conventions behind 100+ production Astro themes.
+[Michael Andreuzza](https://michaelandreuzza.com) at
+[Lexington Themes](https://lexingtonthemes.com), built on the conventions
+behind 100+ production Astro themes.
 
 Skills are plain-Markdown instructions that AI coding agents (Cursor, Claude
 Code, Codex, and others) load on demand. These ones teach the stack: how to
