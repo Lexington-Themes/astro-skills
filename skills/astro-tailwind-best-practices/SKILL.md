@@ -14,13 +14,13 @@ project's own AGENTS.md or rules disagree, the project wins.
 
 Follow Astro's [project structure](https://docs.astro.build/en/basics/project-structure/):
 
-- `src/pages/` — file-based routes only. No helper modules inside `pages/`;
+- `src/pages/`: file-based routes only. No helper modules inside `pages/`;
   anything not a route belongs in `src/lib/` or `src/components/`.
-- `src/layouts/` — shared page shells. New pages use an existing layout
+- `src/layouts/`: shared page shells. New pages use an existing layout
   unless the task says otherwise.
-- `src/components/` — UI, grouped by domain, not by type (field convention:
+- `src/components/`: UI, grouped by domain, not by type (field convention:
   `components/pricing/`, not `components/cards/`).
-- `src/assets/` or `src/images/` — images that should be optimized. Only
+- `src/assets/` or `src/images/`: images that should be optimized. Only
   files that must be served as-is (favicons, robots.txt, downloads) go in
   [`public/`](https://docs.astro.build/en/basics/project-structure/#public).
 - Use the project's import alias (usually `@/` for `src/`) defined in
@@ -47,7 +47,7 @@ Field conventions that keep a codebase coherent:
   [official guide](https://docs.astro.build/en/guides/styling/#tailwind):
   `npx astro add tailwind` installs `@tailwindcss/vite`, and a global
   stylesheet gets `@import "tailwindcss"`. The `@astrojs/tailwind`
-  integration is legacy Tailwind 3 only — never add it to a Tailwind 4
+  integration is legacy Tailwind 3 only; never add it to a Tailwind 4
   project.
 - If the project defines theme tokens (colors, fonts, spacing) in CSS via
   `@theme`, use the token utilities. Never introduce raw palette colors
@@ -113,12 +113,12 @@ and treat the source file as the single source of truth for dimensions:
   Astro's image service resizes to exactly what you ask; a mismatched pair
   crops the generated file (`fit` defaults to cover), and no CSS will bring
   the pixels back. If you need one dimension, pass only `width`.
-- Uniform boxes (card grids) are the one case for an explicit pair — set
+- Uniform boxes (card grids) are the one case for an explicit pair: set
   `fit` and `position` deliberately, or crop in CSS with `aspect-ratio` +
   `object-cover` so the full file still ships.
 - Use `widths` + `sizes` for responsive variants; `alt` is required (empty
   `alt=""` only for purely decorative images).
-- `public/` images bypass optimization entirely — that's why they don't get
+- `public/` images bypass optimization entirely, which is why they don't get
   srcsets or format conversion. Don't put content images there.
 
 ## Content collections
@@ -154,6 +154,6 @@ projects: `src/content/config.ts`), respect the schema
 
 ---
 
-Maintained by [Lexington Themes](https://lexingtonthemes.com), makers of
-Astro + Tailwind themes that ship with AGENTS.md, scoped rules, and design
-skills out of the box.
+Maintained by [Michael Andreuzza](https://lexingtonthemes.com), maker of
+Lexington Themes: Astro + Tailwind themes that ship with AGENTS.md, scoped
+rules, and design skills out of the box.

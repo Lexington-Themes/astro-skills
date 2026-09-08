@@ -1,6 +1,6 @@
 ---
 name: astro-content-collections
-description: Working with Astro content collections — defining schemas with Zod, the glob loader, image() fields, querying, drafts, and rendering. Use when adding or editing content entries, changing a collection schema, or building pages from collection data.
+description: Working with Astro content collections, covering schemas with Zod, the glob loader, image() fields, querying, drafts, and rendering. Use when adding or editing content entries, changing a collection schema, or building pages from collection data.
 ---
 
 # Astro content collections
@@ -42,8 +42,8 @@ marked as such.
 ## Schema rules
 
 - Import Zod from `astro/zod`, per the docs.
-- Dates in frontmatter arrive as strings or dates depending on quoting — use
-  `z.coerce.date()` so both work.
+- Dates in frontmatter arrive as strings or dates depending on quoting, so
+  use `z.coerce.date()` to handle both.
 - **Image fields use the `image()` helper**, not `z.string()`:
 
   ```ts
@@ -68,7 +68,7 @@ marked as such.
 Field conventions:
 
 - New entries start as a copy of an existing entry's frontmatter, then edit.
-  Never invent frontmatter fields — unknown fields are either rejected by a
+  Never invent frontmatter fields: unknown fields are either rejected by a
   strict schema or silently dropped, and both are bugs.
 - Keep frontmatter values consistent with the collection's existing style
   (date formats, tag casing, image paths) rather than introducing variants.
@@ -83,10 +83,10 @@ Two working patterns; check which one the project already uses:
   const published = await getCollection("posts", ({ data }) => !data.draft);
   ```
 
-  Every `getCollection()` call site must apply the filter — including RSS
+  Every `getCollection()` call site must apply the filter, including RSS
   feeds and sitemaps, which are the classic leak (field convention).
 - **Underscore-prefixed filenames** excluded by the loader pattern
-  (field convention — one exclusion point, no filters to forget):
+  (field convention: one exclusion point, no filters to forget):
 
   ```ts
   loader: glob({ base: "./src/content/posts", pattern: ["**/*.md", "!**/_*"] }),
@@ -129,6 +129,6 @@ Two working patterns; check which one the project already uses:
 
 ---
 
-Maintained by [Lexington Themes](https://lexingtonthemes.com), makers of
-Astro + Tailwind themes that ship with AGENTS.md, scoped rules, and design
-skills out of the box.
+Maintained by [Michael Andreuzza](https://lexingtonthemes.com), maker of
+Lexington Themes: Astro + Tailwind themes that ship with AGENTS.md, scoped
+rules, and design skills out of the box.

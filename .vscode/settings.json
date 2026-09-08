@@ -2,5 +2,5 @@
     "workbench.colorCustomizations": {
         "titleBar.border": "#42d773"
     },
-    "window.title": "${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}[Branch: master]"
+    "window.title": "${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}[Branch: main]"
 }

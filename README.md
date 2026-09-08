@@ -1,13 +1,13 @@
-# Lexington Skills
+# Astro Skills
 
-Free agent skills for the Astro + Tailwind CSS stack, from the team behind
-[Lexington Themes](https://lexingtonthemes.com) — the largest Astro theme
-library, built on these conventions across 100+ themes.
+Free agent skills for the Astro + Tailwind CSS stack, by
+[Michael Andreuzza](https://lexingtonthemes.com), maker of Lexington Themes,
+built on the conventions behind 100+ production Astro themes.
 
 Skills are plain-Markdown instructions that AI coding agents (Cursor, Claude
 Code, Codex, and others) load on demand. These ones teach the stack: how to
 structure, style, and ship Astro + Tailwind projects following the official
-docs and hard-won conventions. No design systems, no theme content — just the
+docs and hard-won conventions. No design systems, no theme content, just the
 mechanics, free to use anywhere.
 
 ## Install
@@ -15,7 +15,7 @@ mechanics, free to use anywhere.
 With the [skills](https://skills.sh) CLI, for any supported agent:
 
 ```bash
-npx skills add lexington-themes/skills
+npx skills add lexington-themes/astro-skills
 ```
 
 Or manually: copy a skill folder into your project's skills directory

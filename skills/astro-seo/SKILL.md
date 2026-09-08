@@ -1,6 +1,6 @@
 ---
 name: astro-seo
-description: SEO wiring for Astro sites — canonical URLs, meta tags, sitemaps, robots.txt, and JSON-LD structured data. Use when adding pages, fixing indexing issues, or implementing structured data in an Astro project.
+description: SEO wiring for Astro sites, covering canonical URLs, meta tags, sitemaps, robots.txt, and JSON-LD structured data. Use when adding pages, fixing indexing issues, or implementing structured data in an Astro project.
 ---
 
 # Astro SEO
@@ -26,10 +26,10 @@ first when debugging SEO output.
 ## Titles and descriptions
 
 - Every indexable page sets a unique `<title>` and `<meta name="description">`.
-  Do it through the project's existing SEO component or layout props — don't
+  Do it through the project's existing SEO component or layout props; don't
   hand-write meta tags per page if a component exists (field convention).
-- Titles read as page-specific first, brand second: `Pricing — Acme`, not
-  `Acme — the best widgets — Pricing`.
+- Titles read as page-specific first, brand second: `Pricing | Acme`, not
+  `Acme, the best widgets | Pricing`.
 - Descriptions are written for the search snippet: one or two sentences,
   roughly 150 characters, no keyword lists.
 
@@ -57,11 +57,11 @@ Field conventions:
 - Set `og:title`, `og:description`, `og:image`, `og:url`, and
   `twitter:card` in the same SEO component as the rest of the head.
 - `og:image` must be an **absolute URL** (build it with
-  `new URL(path, Astro.site)`) — relative paths silently fail on most
+  `new URL(path, Astro.site)`), because relative paths silently fail on most
   platforms. Aim for 1200×630.
 - Static OG images live in `public/`; generated ones come from an endpoint
-  (e.g. `src/pages/og/[slug].png.ts`). Either is fine — absolute URL is the
-  part people get wrong.
+  (e.g. `src/pages/og/[slug].png.ts`). Either is fine; the absolute URL is
+  the part people get wrong.
 
 ## Sitemap
 
@@ -90,13 +90,13 @@ Sitemap: https://example.com/sitemap-index.xml
 Use the integration's `filter()` option to exclude pages that shouldn't be
 indexed (thank-you pages, internal tools). If a page is excluded from the
 sitemap for that reason, also give it
-`<meta name="robots" content="noindex" />` — the sitemap is a hint, the
+`<meta name="robots" content="noindex" />`: the sitemap is a hint, the
 meta tag is the instruction (field convention).
 
 ## JSON-LD structured data
 
 Astro renders structured data as an inline script. Use `set:html` with
-`JSON.stringify` — don't interpolate JSON into the template by hand:
+`JSON.stringify`; don't interpolate JSON into the template by hand:
 
 ```astro
 ---
@@ -130,7 +130,7 @@ Field conventions:
 ## Redirects and hygiene
 
 - Configure moved URLs in Astro's [`redirects`](https://docs.astro.build/en/guides/routing/#redirects)
-  config (or the host's config) with 301s — don't leave old URLs 404ing
+  config (or the host's config) with 301s. Don't leave old URLs 404ing
   after a rename.
 - One `<h1>` per page; heading levels don't skip.
 - Every content image has meaningful `alt` text (see the
@@ -147,6 +147,6 @@ Field conventions:
 
 ---
 
-Maintained by [Lexington Themes](https://lexingtonthemes.com), makers of
-Astro + Tailwind themes that ship with AGENTS.md, scoped rules, and design
-skills out of the box.
+Maintained by [Michael Andreuzza](https://lexingtonthemes.com), maker of
+Lexington Themes: Astro + Tailwind themes that ship with AGENTS.md, scoped
+rules, and design skills out of the box.
