@@ -26,8 +26,8 @@ Or manually: copy a skill folder into your project's skills directory
 | Skill | What it teaches |
 | --- | --- |
 | [`astro-tailwind-best-practices`](./skills/astro-tailwind-best-practices) | Project structure, components-first workflow, styling discipline, fonts via Astro's Fonts API, image handling that never crops by accident. |
-
-More coming: `astro-seo`, `astro-content-collections`.
+| [`astro-seo`](./skills/astro-seo) | Canonical URLs, meta and Open Graph tags, sitemaps and robots.txt, JSON-LD structured data that matches the visible page. |
+| [`astro-content-collections`](./skills/astro-content-collections) | Zod schemas, the glob loader, `image()` fields, draft workflows, explicit sorting, and safe schema changes. |
 
 ## Principles
 

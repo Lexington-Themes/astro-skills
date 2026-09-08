@@ -123,7 +123,8 @@ and treat the source file as the single source of truth for dimensions:
 
 ## Content collections
 
-If the project has `src/content/` with a config file, respect it as a schema
+If the project has collections defined in `src/content.config.ts` (older
+projects: `src/content/config.ts`), respect the schema
 ([content collections docs](https://docs.astro.build/en/guides/content-collections/)):
 
 - New entries copy an existing entry's frontmatter, then edit. Never invent
